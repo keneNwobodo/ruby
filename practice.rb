@@ -372,7 +372,7 @@ else
     puts "x is greater than 10 or equal" 
 end
 
-#------- sharppoint------------
+#------- spaceship ------------
  puts 5 <=> 10
  puts 10 <=> 8
  puts 5 <=> 5
