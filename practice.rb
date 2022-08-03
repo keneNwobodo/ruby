@@ -377,4 +377,68 @@ end
  puts 10 <=> 8
  puts 5 <=> 5
 
+ #------range---------------
+for i in 0..6
+    puts "#{i} hi"
+end
+
+for i in 0...6
+    puts "#{i} hi, exclusive range"
+end
+
+5.upto(7) { |num| puts "value is #{num}" }
+5.downto(0) { |val| puts "value is #{val}" }
+
+arr = [1,2]
+puts arr.methods
+
+
+#------ hashes--------------
+my_hash = {
+    :first_name => "Kenechukwu",
+    :last_name => "Nwobodo",
+    :city => "Abuja",
+    :country => "Nigeria",
+    :age => 23
+}
+
+my_hash_two = Hash.new
+my_hash_two = {
+    :role_model => "Abuja",
+    :fav_food => "Nigeria"
+}
+
+
+my_hash.delete(:age)
+my_hash_two[:hobby] = "Football"
+
+puts my_hash.merge(my_hash_two)
+
+#-------chaining methods-------------
+strs = ["hey", "my", "name", "is", "kene"]
+puts strs.first(4).reverse.join(" ").capitalize
+
+
+p []
+p nil
+puts []
+puts nil
+
+#-------select----------
+arr3 = [2, 4, 6, 0, 2]
+
+new_arr3 = arr3.select {|num| num > 3}
+puts new_arr3
+
+#---reduce----------------
+new_arr_reduce = arr3.reduce {|acc, val| acc + val}
+puts new_arr_reduce
+
+#-----any and all--------------------
+arr4 = [1, 2, 3, 5, 6]
+puts arr4.any? {|num| num <= 0}
+
+puts arr4.all? {|num| num >= 1}
+
+
 
