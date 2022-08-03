@@ -20,12 +20,18 @@ questions = [
 def test_questions(questions)
     answer = ""
     score = 0
-    for question in questions
-         puts question.prompt
+    p questions
+    # for question in questions
+    #      puts question.prompt
+    #     answer = gets.chomp()
+    #     if answer == question.answer
+    #         score += 1
+    #     end
+    # end
+    questions.each do |question|
+        puts question.prompt
         answer = gets.chomp()
-        if answer == question.answer
-            score += 1
-        end
+        answer === question.answer ? score += 1 : " "
     end
     puts "You scored #{score.to_s} out of #{questions.length().to_s}"
 end

@@ -1,7 +1,7 @@
 # name =  "Kenechukwu Nwobodo  "
 
-# puts name.upcase()
-# puts name.downcase()
+# puts name.upcase
+# puts name.downcase
 # puts name
 # puts name.strip() # strip is equivalent to trim in js
 # puts name.length()
@@ -440,5 +440,41 @@ puts arr4.any? {|num| num <= 0}
 
 puts arr4.all? {|num| num >= 1}
 
+#------nested arrays amd hashes--------------------
+teacher_mailboxes = [
+  ["Adams", "Baker", "Clark", "Davis"],
+  ["Jones", "Lewis", "Lopez", "Moore"],
+  ["Perez", "Scott", "Smith", "Young"]
+]
 
+#-------each with index iteration of nested arrays-----
+
+teacher_mailboxes.each_with_index do |row, row_index|
+    row.each_with_index do |colum, column_index|
+    puts "ROW: #{row}: ROW_INDEX #{row_index}, COLUMN: #{colum} COLUMN_INDEX: #{column_index}"
+ end
+end
+
+#--------flatten --------------------------------------
+teacher_mailboxes.flatten.each do |teacher|
+    puts "The teacher's name is #{teacher}"
+end
+
+#---------accessing data in hashes----------------------
+vehicles = {
+    alice: {year: 2015, month: 10},
+    jane: {year: 2020, month: 9},
+    mike: {year: 2021, month: 6}
+}
+
+puts vehicles.dig(:jake, :year)
+puts vehicles.dig(:alice, :year)
+puts vehicles[:mike][:day]
+puts vehicles[:kene] = {:year => 2008, :month => 04}
+puts vehicles[:alice].delete(:month)
+puts vehicles
+
+#------select (filter) method-----------------------------
+puts vehicles.select {|name, data| data[:year] >= 2019}
+puts vehicles.collect {|name, data| data if data[:year] >= 2018}
 
