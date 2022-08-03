@@ -38,11 +38,12 @@ shift_position = mov_positions(nums, target)
 
 # invoke the shift func
 shifted = shift_nums(shift_position)
-
+  
+  puts shifted
   return shifted
 end
 
-puts caesar_cipher("What a string!", 5)
+caesar_cipher("What a string!", 5)
 
 
 
