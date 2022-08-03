@@ -3,16 +3,16 @@
 # if the one by the left is higher than the one on the right
 # swap their positions
 
+
 def bubble_sort(array)
 	array_length = array.size
 
 	return array if array_length <= 1
-	
-	# end
-	while(true)
+
+	loop do
 		swapped = false
 
-		(array.length - 1).times do |index|
+		(array_length - 1).times do |index|
 			if array[index] > array[index + 1]
 				array[index], array[index + 1] = array[index + 1], array[index]
 				swapped = true
@@ -26,26 +26,12 @@ def bubble_sort(array)
 	return array
 end
 
-
 # def bubble_sort(array)
 # 	array_length = array.size
 
 # 	return array if array_length <= 1
-
-# 	# loop do
-# 	# 	swapped = false
-
-# 	# 	(array_length - 1).times do |index|
-# 	# 		if array[index] > array[index + 1]
-# 	# 			array[index], array[index + 1] = array[index + 1], array[index]
-# 	# 			swapped = true
-# 	# 		end
-# 	# 	end
-
-# 	# 	break if not swapped
-
+	
 # 	# end
-
 # 	while(true)
 # 		swapped = false
 
