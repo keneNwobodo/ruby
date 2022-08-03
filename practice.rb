@@ -311,7 +311,58 @@
 # student5.has_honors()
 # student6.has_honors()
 
-#--------- quiz game===============
+#---------inheritance in classes===============
+class Chef 
+    def initialize(pastry, coffee)
+        @pastry = pastry
+        @coffee = coffee
+    end
+
+    def make_pastries
+        puts "I make lots of pastries like #{@pastry}"
+    end
+
+     def make_make_coffee
+        puts "I make lots of pastries like #{@coffee}"
+    end
+end
+
+chef1 = Chef.new("Spaghetti", "opensea")
+
+
+# cless JapanesChef inherits the prototype of Chef class
+class JapanesChef < Chef
+    def initialize(japanPastry, japanCoffee)
+        @japanCoffee = japanCoffee
+        @japanPastry = japanPastry
+    end
+
+        def make_make_coffee
+         puts "I make lots of pastries like #{@japanPastry}"
+        end
+  
+end
+
+japanChef = JapanesChef.new("cof", "past")
+puts japanChef.make_pastries()
+
+puts japanChef.make_make_coffee()
+
+puts chef1.make_make_coffee()
+
+#----------module----------------
+
+module Tools
+
+def adds(num1, num2)
+    puts "The sum is #{num1.to_f + num2.to_f}"
+end
+
+def names(name)
+    puts "The sum is #{name}"
+end
+end
+
 
 
 
